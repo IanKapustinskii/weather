@@ -1,0 +1,30 @@
+.daily-weather__item {
+    flex-direction: column;
+    align-items: center;
+    width: calc((100% - 2%)/7);
+    background-color: var(--element-body);
+    border-radius: 15px;
+    padding: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.daily-weather__list {
+    width: 100%;
+    gap: 2%;
+}
+
+.daily-weather__temperature {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.daily-weather__title {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.daily-weather__item .weather__icon {
+    margin-bottom: 10px;
+}

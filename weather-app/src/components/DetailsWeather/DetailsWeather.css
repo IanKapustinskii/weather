@@ -1,0 +1,23 @@
+.weather-details__item {
+    flex-direction: column;
+    width: calc((100% - 5%)/4);
+    background-color: var(--element-body);
+    padding: 15px;
+    border-radius: 15px;
+    gap: 25px;
+}
+
+.weather-details__list {
+    width: 100%;
+    gap: 5%
+}
+
+.weather-details__title {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.weather-details__info {
+    font-size: 40px;
+    font-weight: 300;
+}
