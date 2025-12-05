@@ -9,7 +9,6 @@
   min-width: 66%;
   min-height: 286px;
   border-radius: 20px;
-  background-image: url(src/assets/images/bg-today-large.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
