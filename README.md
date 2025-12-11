@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive weather application with city search and customizable units for temperature, precipitation, wind, and time.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **City Search**: Find the weather for any city worldwide.
+- **Unit Conversion**: Switch between metric and imperial systems:
+  - Temperature (°C / °F)
+  - Precipitation (mm / in)
+  - Wind speed (m/s / mph)
+  - Time format (24h / 12h)
+- **Custom Unit Settings**: Set units individually for each parameter.
+- **Responsive Design**: Works on desktop, tablet, and mobile devices.
+- **Live Data**: Fetches weather information from:
+  - [Open-Meteo](https://open-meteo.com/) API for forecasts
+  - Geocoding API for city search
+- **Interactive UI** built with React for fast and smooth updates.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React + TypeScript  
+- Vite for bundling and development  
+- Open-Meteo API  
+- CSS for styling and responsive design  
 
-## Expanding the ESLint configuration
+## Usage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Searching for a city
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Enter the city name in the search input.
+2. Select the desired city from the suggestions.
+3. The current weather and forecast will update automatically.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Switching units
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Global switch: Change between metric and imperial units for all measurements at once.
+- Individual unit switches: Customize units for temperature, precipitation, wind, and time separately.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Viewing weather details
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Current temperature, precipitation, wind speed, and time
+- Daily and hourly forecasts
+- Updates dynamically based on selected units and location
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Deployment
+
+- The project is hosted on GitHub Pages: https://iankapustinskii.github.io/weather/
+
+### Available Languages:
+[English](README.md) | [Deutsch](README.de.md) | [Русский](README.ru.md)
+
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/IanKapustinskii/weather.git
+cd weather
+npm install
+npm run dev
