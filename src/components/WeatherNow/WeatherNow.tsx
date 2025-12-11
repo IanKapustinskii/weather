@@ -4,7 +4,6 @@ import { WeatherIcon } from '../CityWeather/CityWeatherIcon';
 import type { City } from '../../api/CityName';
 import { useUnits } from '../UnitsProvider/UnitsProvider';
 import { temperatureSymbols } from '../../constants/UnitsLabel';
-import bg from '../../assets/images/bg-today-large.svg';
 
 export interface WeatherNowProps {
     cityData: City;
@@ -38,7 +37,7 @@ export const WeatherNow: FC<WeatherNowProps> = ({ cityData, weatherData }) => {
     }
 
     return (
-        <div className="flex country__container" style={{backgroundImage: `url(${bg})`}}>
+        <div className="flex country__container" >
             <div className='flex country__details'>
                 <h2 className='title country__title'>
                     {cityData.name}, {cityData.country}
